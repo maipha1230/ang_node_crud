@@ -1,7 +1,7 @@
-<div class="container">
+<div class="container mt-5">
   <h3>List of Products</h3>
   <div>
-    <a routerLink="/product/add"> Add New Product </a>
+    <a class = "btn btn-success" routerLink="/product/add"> Add New Product </a>
   </div>
   <table>
     <tr>
@@ -21,9 +21,9 @@
       <td>{{ product.sales_count }}</td>
       <td>{{ product.sale_date }}</td>
       <td>
-        <a routerLink="/product/detail/{{ product.id }}">Detail</a>&nbsp;
-        <a routerLink="/product/update/{{ product.id }}">Edit</a>&nbsp;
-        <button title="delete product" (click)="delete(product)">x</button>
+        <a class = "btn btn-primary" routerLink="/product/detail/{{ product.id }}">Detail</a>&nbsp;
+        <a class = "btn btn-warning" routerLink="/product/update/{{ product.id }}">Edit</a>&nbsp;
+        <button class = "btn btn-danger" title="delete product" (click)="delete(product)">x</button>
       </td>
     </tr>
   </table>

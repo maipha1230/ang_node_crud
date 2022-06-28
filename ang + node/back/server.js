@@ -17,6 +17,8 @@ const db = mysql.createConnection({
     database: 'test'
 });
 
+const port  = process.env.PORT || 3000
+
 //home page fetch all product list
 app.get('/', (req, res) => {
     db.query('SELECT * FROM product ORDER BY sale_date ASC', (err, result) => {
@@ -100,7 +102,7 @@ app.delete('/delete/:id', (req, res) => {
 
 
 //server running on port 3001
-app.listen(3001, () => {
+app.listen(port, () => {
     console.log('server is running on port 3001');
 })
 

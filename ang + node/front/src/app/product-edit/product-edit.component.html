@@ -1,4 +1,5 @@
-<div *ngIf="product">
+<div class="container">
+    <div *ngIf="product">
     <h2>{{product.name | uppercase}} Details</h2>
     <div>
       <p>
@@ -21,6 +22,7 @@
           Sale Date: <input [(ngModel)]="product.sale_date" placeholder="Product Sale Date">
       </p>
     </div>
-    <button (click)="goBack()">Go Back</button>
-    <button (click)="save()">Save</button>
+    <button class="btn btn-secondary" (click)="goBack()">Go Back</button>
+    <button class="btn btn-success" (click)="save()">Save</button>
   </div>
+</div>

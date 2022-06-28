@@ -27,14 +27,12 @@ export class ProductService {
   //GET product by id. Will 404 if not found
   getProduct(id:string):Observable<any>{
     const url = `${this.productUrl}/detail/${id}`;
-    console.log(url); 
     return this.http.get(url);
   }
 
 
   //POST : add new product to the server
   addProduct(product: Product){
-    console.log(product);
     return this.http.post(this.productUrl+'/add', product, {headers: new HttpHeaders({'Content-Type': 'application/json'})});   
   }
 
