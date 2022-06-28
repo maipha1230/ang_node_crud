@@ -55,7 +55,6 @@ app.post('/add', (req, res) => {
         if(err) {
             console.log(err);
         } else {
-            console.log(res.data);
             res.send({data: result,
             message: "added"})
         }
@@ -103,6 +102,6 @@ app.delete('/delete/:id', (req, res) => {
 
 //server running on port 3001
 app.listen(port, () => {
-    console.log('server is running on port 3001');
+    console.log('server is running on port '+ port);
 })
 
