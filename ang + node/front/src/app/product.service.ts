@@ -15,7 +15,7 @@ const httpOptions = {
 })
 
 export class ProductService {
-  private productUrl = 'http://localhost:3000'; //Base Url to REST API
+  private productUrl = 'http://128.199.106.81'; //Base Url to REST API
 
   constructor(private http:HttpClient) { }
 

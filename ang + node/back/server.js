@@ -12,10 +12,20 @@ app.use(bodyParser.urlencoded({ extended: true }))
 //connect to database(MySQL)
 const db = mysql.createConnection({
     user: 'root',
+    password: 'LM+j99u2nGgExV',
+    host: '127.0.0.1',
+    database: 'property'
+});
+
+//for localhost
+/*
+const db = mysql.createConnection({
+    user: 'root',
     password: '',
     host: 'localhost',
     database: 'test'
 });
+*/
 
 const port  = process.env.PORT || 3000
 
@@ -98,6 +108,7 @@ app.delete('/delete/:id', (req, res) => {
         }
     })
 })
+
 
 
 //server running on port 3001
